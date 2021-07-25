@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".grm_account_bank").html("KB국민");
     $(".brd_account_bank").html("NH농협");
     $(".grm_account_num").text("208401 04 273636");
-    $(".brd_account_num").text("312 0204 6512 61");
+    $(".brd_account_num").text("811091 52 0822 56");
     $(".GroomAccountName").text("박종국");
     $(".BrideAccountName").text("임헌호");
     $(".GroomAccountRelation").text("혼주");
@@ -13,8 +13,8 @@ $(document).ready(function () {
 
     $(".grm_account_bank2").html("NH농협");
     $(".brd_account_bank2").html("우리");
-    $(".grm_account_num2").text("811091 52 0822 56");
-    $(".brd_account_num2").text("1002 741 237704");
+    $(".grm_account_num2").text("1002 741 237704");
+    $(".brd_account_num2").text("312 0204 6512 61");
     $(".GroomAccountName2").text("박현준");
     $(".BrideAccountName2").text("임은민");
     $(".GroomAccountRelation2").text("신랑");
