@@ -11,8 +11,8 @@ $(document).ready(function () {
     $(".GroomAccountRelation").text("혼주");
     $(".BrideAccountRelation").text("혼주");
 
-    $(".grm_account_bank2").html("NH농협");
-    $(".brd_account_bank2").html("우리");
+    $(".grm_account_bank2").html("우리");
+    $(".brd_account_bank2").html("NH농협");
     $(".grm_account_num2").text("1002 741 237704");
     $(".brd_account_num2").text("312 0204 6512 61");
     $(".GroomAccountName2").text("박현준");
