@@ -6474,6 +6474,14 @@ button.bg-danger:focus {
     background-color: #f8f9fa !important;
 }
 
+.bg-light-ivory {
+    background-color: #fbfaf8 !important;
+}
+
+.bg-dark-ivory {
+    background-color: #eeeae3 !important;
+}
+
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
@@ -9866,6 +9874,14 @@ body {
     padding-left: 0;
 }
 
+.ww-wedding-introduces {
+    background-color: transparent;
+    background-image: url("../images/floral-back.png"); 
+    background-size: auto 100%; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+}
+
 /* Couple Friends Style  */
 .ww-couple-friends .carousel {
     padding: 40px 0;
@@ -10030,8 +10046,34 @@ body {
     font-family: "Great Vibes", cursive;
 }
 
+.names span {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.comming-introduce {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.comming-introduce div {
+    font-size: smaller;
+}
+
+.comming-introduce div span {
+    font-weight: bold;
+}
+
+.address {
+    margin-top: 30px;
+}
+
 .ww-section {
-    padding: 100px 0;
+    padding: 70px 0;
+}
+
+.ww-section2 {
+    padding: 50px 0;
 }
 
 .btn-primary {
@@ -10058,4 +10100,145 @@ body {
     bottom: 0;
     left: 0;
     margin: 0px 15px 15px 15px;
+}
+
+.remittance {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12% 0;
+    position: relative;
+    text-align: center;
+}
+
+.remittance .remittance_title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #d1a56d;
+    padding-bottom: 2%;
+}
+
+.remittance .remittance_btn_bx {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.remittance .remittance_btn_bx .btn_bx_1 {
+    width: 47.5%;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.remittance .remittance_btn_bx .btn_bx_2 {
+    width: 47.5%;
+    padding: 0;
+    padding-top: 6%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.remittance .remittance_btn_bx p > span {
+    font-weight: 600;
+    font-size: 17px;
+    color: #3b3b3b;
+    display: inline-block;
+    line-height: 40px;
+    display: none;
+}
+
+.remittance .remittance_btn_bx p > a {
+    margin: 0;
+    width: 90%;
+}
+
+.remittance .remittance_btn_bx p > a {
+    display: inline-block;
+    line-height: 41px;
+    color: white;
+    font-size: 13px;
+    background-color: #ddb16b;
+    border-radius: 22px;
+    padding: 0 5.5%;
+    font-family: 'Noto Sans Kr', sans-serif;
+}
+
+.remittance_pop_h, .remittance_pop_w {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+}
+
+.remittance_pop_h .remittance_pop_inner, .remittance_pop_w .remittance_pop_inner {
+    background-color: #fafafa;
+    border: 1px solid #d0d0d0;
+    width: 90%;
+    margin-left: 5%;
+    padding: 8% 7.5% 5% 7.5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.remittance_pop_inner .re_po {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.remittance_pop_inner .close_btn {
+    width: 100%;
+    line-height: 52px;
+    line-height: 52px;
+    color: white;
+    background-color: #ddb16b;
+    display: block;
+    border-radius: 5px;
+    margin-top: 10%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+}
+
+.remittance_pop_inner .account_info {
+    color: #232323;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    line-height: 40px;
+    border-bottom: 1px solid #aaa;
+    font-size: 18px;
+    margin-bottom: 8.5%;
+}
+
+.remittance_pop_inner .account_c {
+    color: #232323;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    padding-bottom: 2.5%;
+}
+
+.remittance_pop_inner .account_num {
+    color: #232323;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.remittance_pop_inner .copy_btn {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    display: block;
+    line-height: 26px;
+    width: 30%;
+    background-color: #dddddd;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #232323;
 }
