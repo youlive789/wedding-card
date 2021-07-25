@@ -10243,3 +10243,8 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     color: #232323;
 }
+
+.head-color {
+    color: #A87C4F;
+    font-family: 'Noto Serif KR', serif;
+}
