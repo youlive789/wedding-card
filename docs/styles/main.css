@@ -10166,6 +10166,7 @@ body {
 
 .remittance_pop_h, .remittance_pop_w {
     position: absolute;
+    line-height: 0.8;
     top: -10%;
     left: 0;
     width: 100%;
