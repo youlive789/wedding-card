@@ -43,7 +43,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: 'SUIT Variable', sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -9775,11 +9775,8 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    height: 140%;
     text-align: center;
     color: #fff;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    letter-spacing: 2px;
 }
 
 .ww-home-page .ww-wedding-announcement .ww-announcement-container {
@@ -10042,9 +10039,6 @@ body {
 }
 
 /* Common Style */
-.ww-title {
-    font-family: "Great Vibes", cursive;
-}
 
 .names span {
     font-size: larger;

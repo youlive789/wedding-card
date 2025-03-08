@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건우 & 사빈 결혼식</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5e6d3;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .invitation {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #5a3e2b;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery-item {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        #map {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+        }
+        .info {
+            padding: 20px;
+        }
+        button {
+            background-color: #8b5e3b;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_NAVER_MAP_CLIENT_ID"></script>
+</head>
+<body>
+    <section class="invitation">
+        <h1>Love never fails</h1>
+        <p>2025년 05월 31일</p>
+        <p>인천 답동성당, 오후 1시</p>
+    </section>
+    
+    <section class="gallery">
+        <h2>갤러리</h2>
+        <div class="gallery-container">
+            <img src="images/photo1.jpg" class="gallery-item" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/photo2.jpg" class="gallery-item" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/photo3.jpg" class="gallery-item" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+    
+    <section class="map">
+        <h2>오시는 길</h2>
+        <div id="map"></div>
+    </section>
+    
+    <section class="info">
+        <h2>복사 기능</h2>
+        <p>계좌번호: <span id="account">123-456-789012</span> <button onclick="copyToClipboard('account')">복사</button></p>
+        <p>주소: <span id="address">인천광역시 중구 답동</span> <button onclick="copyToClipboard('address')">복사</button></p>
+    </section>
+    
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+    
+    <script>
+        function initMap() {
+            var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.467103, 126.632812),
+                zoom: 15
+            });
+        }
+        
+        function copyToClipboard(id) {
+            var text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('복사되었습니다!');
+            });
+        }
+        
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        window.onload = initMap;
+    </script>
+</body>
+</html>

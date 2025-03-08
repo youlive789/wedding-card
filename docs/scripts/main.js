@@ -149,3 +149,80 @@ function copyToClipboard(elementId) {
     document.body.removeChild(aux);
     alert("복사되었습니다.");
 }
+
+// 메인 핸드라이팅 애니메이션
+new Vara(
+    '.handwriting',
+    './js/serathine.json',
+    [
+      {
+        text: 'Damiano & Savina', // String, text to be shown
+        fontSize: 60, // Number, size of the text
+        strokeWidth: 0.5, // Width / Thickness of the stroke
+        color: 'white', // Color of the text
+        duration: 1200, // Number, Duration of the animation in milliseconds
+        textAlign: 'center', // String, text align, accepted values are left,center,right
+        // x: 0, // Number, x coordinate of the text
+        y: 150, // Number, y coordinate of the text
+        fromCurrentPosition: {
+          // Whether the x or y coordinate should be from its calculated position, ie the position if x or y coordinates were not applied
+        //   x: true, // Boolean
+          y: false, // Boolean
+        },
+        autoAnimation: true, // Boolean, Whether to animate the text automatically
+        // queued: true, // Boolean, Whether the animation should be in a queue
+        delay: 0, // Delay before the animation starts in milliseconds
+      },
+    ],
+  );
+
+// 네이버 맵
+var elluce = new naver.maps.LatLng(37.471108, 126.629816)
+var map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.471108, 126.629816),
+    zoom: 17,
+    minZoom: 8, //지도의 최소 줌 레벨
+    zoomControl: true, //줌 컨트롤의 표시 여부
+    zoomControlOptions: { //줌 컨트롤의 옵션
+        position: naver.maps.Position.TOP_RIGHT
+}});
+var marker = new naver.maps.Marker({
+    icon: {
+        url: "./heart-icon.png",
+        scaledSize: new naver.maps.Size(30, 37),
+        origin: new naver.maps.Point(0, 0),
+    },
+    position: elluce,
+    map: map
+});
+
+var contentString = [
+'<div class="iw_inner" style="padding:5px; margin: 5px 0px 5px 0px; width: 155px; height: 55px; text-align: center; ">',
+'   <p style="foint-size: 2rem; margin: 0;">주교좌 답동성당</p>',
+'   <p style="font-size: 0.8rem; margin: 0;">인천 중구 우현로50번길 2</p>',
+'</div>'
+].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 200,
+    height: 50,
+    backgroundColor: "white",
+    borderColor: "black",
+    borderWidth: 2,
+    disableAnchor: true,
+    textAlign: "center",
+    margin: "auto",
+
+    pixelOffset: new naver.maps.Point(0, -5)
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+infowindow.open(map, marker);
