@@ -8160,7 +8160,7 @@ button.bg-dark:focus {
 
 .pr-4,
 .px-4 {
-    padding-right: 1.5rem !important;
+    padding-right: 0.5rem !important;
 }
 
 .pb-4,
@@ -10254,5 +10254,9 @@ body {
 
 .head-color {
     color: royalblue;
-    font-family: 'Noto Serif KR', serif;
+    /* font-family: 'Noto Serif KR', serif; */
+}
+
+.gsap-opacity {
+    font-family: 'SUIT Variable';
 }

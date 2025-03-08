@@ -197,7 +197,7 @@ var marker = new naver.maps.Marker({
 });
 
 var contentString = [
-'<div class="iw_inner" style="padding:5px; margin: 5px 0px 5px 0px; width: 155px; height: 55px; text-align: center; ">',
+'<div class="iw_inner gsap-opacity" style="padding:5px; margin: 5px 0px 5px 0px; width: 155px; height: 55px; text-align: center; ">',
 '   <p style="foint-size: 2rem; margin: 0;">주교좌 답동성당</p>',
 '   <p style="font-size: 0.8rem; margin: 0;">인천 중구 우현로50번길 2</p>',
 '</div>'
