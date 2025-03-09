@@ -86,16 +86,16 @@
             <div class="ww-section bg-dark-ivory">
                 <div class="container ww-wedding-event text-center" style="font-family: 'SUIT Variable', serif;">
                     <h3 class="h4 text-center pb-3 head-color">예식 안내</h3>
-                    <div class="names"><span>박종국</span> <span>&#183;</span> <span>최경숙</span> 의 장남 <span>현준</span></div>
-                    <div class="names"><span>임헌호</span> <span>&#183;</span> <span>홍정희</span> 의 장녀 <span>은민</span></div>
+                    <div class="names"><span>김병훈</span> <span>&#183;</span> <span>문경미</span> 의 장남 <span>건우</span></div>
+                    <div class="names"><span>박승호</span> <span>&#183;</span> <span>오현옥</span> 의 장녀 <span>사빈</span></div>
                     <ul class="address">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span class="pl-2 text-muted">웨딩플로체 인천<br>(인천시 미추홀구 경원대로 825)</span>
+                            <span class="pl-2 text-muted">답동성당<br>(인천 중구 우현로50번길 2)</span>
                         </li>
                         <li class="pt-2">
                             <i class="far fa-calendar-alt"></i>
-                            <span class="pl-2 text-muted">2021년 9월 18일, 1:00PM</span>
+                            <span class="pl-2 text-muted">2025년 5월 31일, 1:00PM</span>
                         </li>
                     </ul>
                 </div>
@@ -467,6 +467,35 @@
                             힘든 순간에는 가장 큰 위로였던<br>
                         </h6>
                     </div>
+                </div>
+            </div>
+            <div style="
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap-reverse;
+                flex-direction: row-reverse;">
+                <div style="
+                    width:130px;
+                    height:130px;
+                    position: absolute;
+                    background-color:green;">
+                </div>
+            </div>
+        </div>
+        <button class="floating-button" onclick="openPopup()">참석여부</button>
+        <div class="popup" id="popup">
+            <a href="javascript:void(0)" class="close-button" onclick="closePopup()">&times;</a>
+            <div class="overlay-content">
+                <input type="text" class="name" id="name" placeholder="성함" required >
+                <div class="guest-buttons">
+                    <button class="groom" data-on="">신랑측</button>
+                    <button class="bride" data-on="">신부측</button>
+                </div>
+                <div class="attend-buttons">
+                    <span>참석여부</span>
+                    <input type="checkbox" name="attend" id="attend" required>
                 </div>
             </div>
         </div>

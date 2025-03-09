@@ -150,32 +150,6 @@ function copyToClipboard(elementId) {
     alert("복사되었습니다.");
 }
 
-// 메인 핸드라이팅 애니메이션
-new Vara(
-    '.handwriting',
-    './js/serathine.json',
-    [
-      {
-        text: 'Damiano & Savina', // String, text to be shown
-        fontSize: 60, // Number, size of the text
-        strokeWidth: 0.5, // Width / Thickness of the stroke
-        color: 'white', // Color of the text
-        duration: 1200, // Number, Duration of the animation in milliseconds
-        textAlign: 'center', // String, text align, accepted values are left,center,right
-        // x: 0, // Number, x coordinate of the text
-        y: 150, // Number, y coordinate of the text
-        fromCurrentPosition: {
-          // Whether the x or y coordinate should be from its calculated position, ie the position if x or y coordinates were not applied
-        //   x: true, // Boolean
-          y: false, // Boolean
-        },
-        autoAnimation: true, // Boolean, Whether to animate the text automatically
-        // queued: true, // Boolean, Whether the animation should be in a queue
-        delay: 0, // Delay before the animation starts in milliseconds
-      },
-    ],
-  );
-
 // 네이버 맵
 var elluce = new naver.maps.LatLng(37.471108, 126.629816)
 var map = new naver.maps.Map('map', {
@@ -226,3 +200,12 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map, marker);
+
+// floating button
+function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
